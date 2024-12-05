@@ -15,3 +15,8 @@ Array Usage:
 Controls:
 
 */
+
+void setup()  {
+  background(#100030);
+  size(1000,800);
+}
