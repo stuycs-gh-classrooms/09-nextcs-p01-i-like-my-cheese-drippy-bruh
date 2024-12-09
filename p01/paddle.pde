@@ -1,5 +1,5 @@
-//public class paddle { 
+public class paddle { 
 
-//Object[] paddle = new Object[5];
+Object[] paddle = new Object[5];
 
-//}
+}
