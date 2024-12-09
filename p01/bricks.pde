@@ -4,12 +4,12 @@ int xsize;
 int ysize;
 color c = #800869;
 PVector center;
-//instance variables
+
 
 class brick {
   int xsize;
   int ysize;
-  color c = #800869; // Default color
+  color c = #800869; 
   PVector center;
   
   brick(PVector p, int x, int y) {

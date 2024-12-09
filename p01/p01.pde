@@ -16,16 +16,28 @@ Name: Nihal RObi
  
  */
 brick[][] bricks;
-
+Ball ball;
+Paddle paddle;
 
 void setup() {
+  size(1000, 800);
+  background(#100030);
+  ball = new Ball(new PVector(width / 2, height / 2), 20);
   int rows = 16;
   int columns = 20;
   bricks = new brick[rows][columns];
-  background(#100030);
-  size(1000, 800);
   makeBricks(bricks);
+  paddle = new Paddle(100, 20);
+}
+
+
+void draw() {
+  background(#100030);
+  ball.move();
+  ball.display();
   drawBricks(bricks);
+  paddle.move();
+  paddle.display();
 }
 
 PVector topLeft;
