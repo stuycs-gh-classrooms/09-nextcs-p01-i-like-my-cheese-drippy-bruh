@@ -2,7 +2,7 @@
 
 int xsize;
 int ysize;
-color c;
+color c = #800869;
 PVector center;
 //instance variables
 
@@ -16,6 +16,6 @@ class brick {
 
   void display () {
     fill(c);
-    rect(center.x - 25, center.y - 12.5, xsize, ysize);
+    rect(center.x - xsize/2, center.y - ysize/2, xsize, ysize);
   }
 }// brick

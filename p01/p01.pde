@@ -17,7 +17,11 @@ Controls:
 */
 brick[][] bricks;
 
+
 void setup()  {
+  int rows = 16;
+  int columns = 20;
+  bricks = new brick[rows][columns];
   background(#100030);
   size(1000,800);
   makeBricks(bricks);
@@ -30,13 +34,15 @@ PVector topLeft;
 void makeBricks(brick[][] bricks) {
   int rowWidth = 1000;
   int widthSpace = 50;//fix
+  int xsize = 50;
+  int ysize = 25;
   PVector pos = new PVector(widthSpace/2, 12.5);
   for (int r=0; r<bricks.length; r++) {
     for (int c=0; c<bricks[r].length; c++) {
       bricks[r][c] = new brick(pos, xsize, ysize);
-      pos.x+=25;
+      pos.x+=xsize;
     }//columns
-    pos.y+=12.5;
+    pos.y+=ysize;
     pos.x = widthSpace/2;
   }//rows
 }//makebricks
